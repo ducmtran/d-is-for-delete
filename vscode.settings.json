@@ -1,7 +1,16 @@
 {
     "vim.vimrc.enable": true,
     "vim.useSystemClipboard": true,
-    "vim.leader": ",",
+    "vim.leader": " ",
+    // mostly useful for linux/windows
+    "vim.handleKeys": {
+        "<C-w>": false,
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-t>": false,
+        "<C-n>": false,
+        "<C-k>": false,
+    },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["x"],
@@ -10,6 +19,14 @@
         {
             "before": ["X"],
             "after": ["\"", "_", "X"]
+        },
+        {
+            "before": ["c"],
+            "after": ["\"", "_", "c"]
+        },
+        {
+            "before": ["C"],
+            "after": ["\"", "_", "C"]
         },
         {
             "before": ["d"],
@@ -26,7 +43,7 @@
         {
             "before": ["<leader>", "D"],
             "after": ["\"", "*", "D"]
-        }
+        },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
@@ -37,5 +54,6 @@
             "before": ["<leader>", "d"],
             "after": ["\"", "*", "d"]
         }
-    ]
+    ],
+    "vim.highlightedyank.enable": true
 }
