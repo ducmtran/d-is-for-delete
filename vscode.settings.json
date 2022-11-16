@@ -1,32 +1,12 @@
 {
-    "vim.vimrc.enable": true,
     "vim.useSystemClipboard": true,
+    "vim.highlightedyank.enable": true,
+    "vim.matchpairs": "(:),{:},[:],<:>",
     "vim.leader": " ",
-    // mostly useful for linux/windows
-    "vim.handleKeys": {
-        "<C-w>": false,
-        "<C-s>": false,
-        "<C-z>": false,
-        "<C-t>": false,
-        "<C-n>": false,
-        "<C-k>": false,
-    },
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["x"],
             "after": ["\"", "_", "x"]
-        },
-        {
-            "before": ["X"],
-            "after": ["\"", "_", "X"]
-        },
-        {
-            "before": ["c"],
-            "after": ["\"", "_", "c"]
-        },
-        {
-            "before": ["C"],
-            "after": ["\"", "_", "C"]
         },
         {
             "before": ["d"],
@@ -37,6 +17,14 @@
             "after": ["\"", "_", "D"]
         },
         {
+            "before": ["c"],
+            "after": ["\"", "_", "c"]
+        },
+        {
+            "before": ["C"],
+            "after": ["\"", "_", "C"]
+        },
+        {
             "before": ["<leader>", "d"],
             "after": ["\"", "*", "d"]
         },
@@ -44,6 +32,14 @@
             "before": ["<leader>", "D"],
             "after": ["\"", "*", "D"]
         },
+        {
+            "before": ["<leader>", "t"],
+            "after": ["g", "t"]
+        },
+        {
+            "before": ["<leader>", "T"],
+            "after": ["g", "T"]
+        }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
@@ -51,9 +47,13 @@
             "after": ["\"", "_", "d"]
         },
         {
+            "before": ["c"],
+            "after": ["\"", "_", "c"]
+        },
+        {
             "before": ["<leader>", "d"],
             "after": ["\"", "*", "d"]
-        }
+        } 
     ],
-    "vim.highlightedyank.enable": true
+    "vim.sneak": true
 }
