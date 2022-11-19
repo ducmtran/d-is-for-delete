@@ -1,0 +1,28 @@
+{
+    "mapping": {
+        "1,1,1": [
+            "Caps_Lock",
+            "keyboard"
+        ],
+        "1,58,1+1,35,1": [
+            "KEY_LEFT",
+            "keyboard"
+        ],
+        "1,58,1+1,36,1": [
+            "KEY_DOWN",
+            "keyboard"
+        ],
+        "1,58,1+1,38,1": [
+            "KEY_RIGHT",
+            "keyboard"
+        ],
+        "1,58,1+1,37,1": [
+            "KEY_UP",
+            "keyboard"
+        ],
+        "1,58,1": [
+            "if_single(\n\tkey(Escape),\t\n)",
+            "keyboard"
+        ]
+    }
+}
