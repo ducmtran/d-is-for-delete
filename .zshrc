@@ -35,14 +35,19 @@ function _print_current_branch() {
 }
 
 local ret_status="%(?:%{$fg_bold[cyan]%}➜ :%{$fg_bold[red]%}➜ %s)"
-PROMPT=$'%{$reset_color%}%{$fg_bold[cyan]%}➜ %2~ $(_print_current_branch)%{$reset_color%}'
+PROMPT=$'%{$reset_color%}%{$fg_bold[cyan]%}➜ %1~ $(_print_current_branch)%{$reset_color%}'
 PROMPT+=$'\n${ret_status}%{$reset_color%}' # use new line for commands
 
 # kitty
 export KITTY_RC_PASSWORD=foo
 alias kt="kitty"
 alias ktr="kitty @ set-tab-title"
-alias vi='nvim'
+
+# vim
+if command -v nvim &> /dev/null; then
+  alias vi='nvim'
+  export GIT_EDITOR=nvim
+fi
 
 # less
 export LESS='--ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --window=-4'

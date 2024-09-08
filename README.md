@@ -5,12 +5,17 @@ This is forked initially to keep a copy of vim mapping to make 'd' delete (not c
 
 # Usage
 
-## vimrc
+## vim
 ```
-curl -sS https://raw.githubusercontent.com/ducmtran/d-is-for-delete/master/d-is-for-delete >> ~/.vimrc 
+curl -sS https://raw.githubusercontent.com/ducmtran/d-is-for-delete/master/.vimrc >> ~/.vimrc 
 ```
+
+## nvim
+mkdir ~/.config/nvim
+curl -sS https://raw.githubusercontent.com/ducmtran/d-is-for-delete/master/init.vim >> ~/.config/nvim/init.vim
 
 ## ideavimrc:
 ```
 curl -sS https://raw.githubusercontent.com/ducmtran/d-is-for-delete/master/ideavimrc >> ~/.ideavimrc
 ```
+

@@ -6,6 +6,7 @@ set autoindent
 set number
 set ruler
 set splitright
+set relativenumber
 
 set wildmode=longest:full,full
 " set wildignorecase
