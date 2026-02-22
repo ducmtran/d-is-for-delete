@@ -5,7 +5,7 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'knsh14/vim-github-link'
 call plug#end()
 
-"colorscheme tokyonight-night
+colorscheme tokyonight-night
 let g:lightline = {'colorscheme': 'tokyonight'}
 
 lua << EOF
