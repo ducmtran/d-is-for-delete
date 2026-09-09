@@ -12,7 +12,7 @@ curl -sS https://raw.githubusercontent.com/ducmtran/d-is-for-delete/master/.vimr
 
 ## nvim
 mkdir ~/.config/nvim
-curl -sS https://raw.githubusercontent.com/ducmtran/d-is-for-delete/master/init.vim >> ~/.config/nvim/init.lua
+curl -sS https://raw.githubusercontent.com/ducmtran/d-is-for-delete/master/init.lua >> ~/.config/nvim/init.lua
 
 ## ideavimrc:
 ```
