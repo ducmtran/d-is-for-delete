@@ -29,6 +29,8 @@ alias l='ls -lah'
 alias ll='ls -lh'
 alias la='ls -lAh'
 
+alias cpwd="pwd | tr -d '\n' | pbcopy"
+
 # prompt
 autoload -U colors; colors
 setopt prompt_subst
