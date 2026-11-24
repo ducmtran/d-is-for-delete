@@ -108,8 +108,9 @@ export KITTY_RC_PASSWORD=foo
 alias kt="kitty"
 alias ktr="kitty @ set-tab-title"
 
-# fzf
-if command -v fzf &> /dev/null; then
+# fzf (git install: git clone https://github.com/junegunn/fzf ~/.fzf && ~/.fzf/install --bin)
+[[ -d "$HOME/.fzf/bin" && ":$PATH:" != *":$HOME/.fzf/bin:"* ]] && export PATH="$HOME/.fzf/bin:$PATH"
+if command -v fzf &> /dev/null && fzf --zsh &> /dev/null; then
   source <(fzf --zsh)
 fi
 
@@ -121,7 +122,16 @@ if command -v nvim &> /dev/null; then
 fi
 
 # zsh-autosuggestions
-[[ -f "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+_zsh_as=""
+if command -v brew &> /dev/null; then
+  # MacOS: brew install zsh-autosuggestions
+  _zsh_as="$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+elif [[ -f "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+  # Linux: git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+  _zsh_as="$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
+fi
+[[ -f "$_zsh_as" ]] && source "$_zsh_as"
+unset _zsh_as
 
 # lazygit
 alias lg=lazygit
